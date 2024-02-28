@@ -1,0 +1,83 @@
+*{box-sizing: border-box;}
+
+body{ background-color:beige;}
+
+/*Style header */
+
+header{margin-bottom: 25px;}
+
+nav{display: flex;background-color: #bfd53c;}
+
+.navbar{display: flex; justify-content: space-around;align-items: center;list-style: none;width: 100%;}
+
+.input, .input_footer{display: flex;  background-color: #b37799;width: 9em;justify-content:center;align-items: center;font-size: 1.5em;
+      font-weight:900;border-radius: 10px 0px ;height: 40px; box-shadow: 6px 6px 6px black;transition: 0.2s;}
+
+a{color: black;}
+
+.input:hover{width: 10em;height: 50px;}
+
+.bar{display: none;}
+
+/*Style footer */
+
+footer{display: flex;justify-content: space-around;align-items: center;  background-color: #bfd53c;margin-top: 25px;}
+
+.text_footer{font-size: 1em;font-family:'Times New Roman', Times, serif}
+
+/*Style main index */
+
+section{display: flex;flex-direction: row;align-items: last baseline;margin: 25px;border-bottom:5px solid #bfd53c;}
+
+.container{display: flex;flex-direction: column;margin: 40px;}
+
+p{font-family:'Times New Roman', Times, serif}
+
+.img_index{width: 450px; height: 300px;margin: 25px;border-radius: 150px;}
+
+h3{margin: 0;}
+
+/*Main mobile*/
+@media (max-width: 350px) {
+
+  section{flex-direction: column;}
+
+  .img_index{width: 200px; height: 200px;} 
+}
+/*Main tablet*/
+@media only screen and (min-width:350px) and (max-width: 990px) {
+
+  section{flex-direction: column;}
+
+  .img_index{width: 200px; height: 200px;}
+}
+/*Header tablet*/
+@media only screen and (min-width:500px) and (max-width: 1260px) {
+.navbar{flex-direction: column;}
+
+.logo{width: 180px;height: 180px;}
+
+.input{margin: 10px;}
+}
+/*Header mobile*/
+@media (max-width: 500px) {
+
+  nav{border-radius: 10px;}
+  
+  .navbar{flex-direction: column;}
+
+  .logo{width: 100px;height: 100px;}
+  
+  .input_nav{margin: 10px;display: none;}
+
+  .bar{display: flex;}
+
+  .bar:hover{background-color: #b37799;border-radius: 10px;}
+}
+/*Footer mobile */
+@media (max-width: 350px) {
+
+  footer{flex-direction: column;border-radius: 10px;}
+
+  .input_footer, .link_social{margin: 10px;}
+}
