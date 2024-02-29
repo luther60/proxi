@@ -1,30 +1,10 @@
 <?php 
 require_once 'lib/pdo.php';
 require_once 'lib/config.php';
-?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shorcut icon" href="assets/favicon.ico" >
-  <title>Proxi Super Tracy le Mont</title>
-</head>
-<header>
-  <nav>
-    <img class="logo" id="img_logo" src="assets/logoproxi2012.png" alt="Logo magasin Proxi Super">
-    <ul class="navbar">
-      <li class="input input_nav"><a  href="Nos_services.html">Nos services</a></li>
-      <li class="input input_nav"><a  href="Producteurs_locaux.html">Producteurs locaux</a></li>
-      <li class="input input_nav"><a  href="Contact.html">A propos</a></li>
-      <li class="input input_nav"><a  href="Contact.html">Espace pro</a></li>
-      <img class="bar" id="navbar" src="assets/icons8-menu-50.png" alt="Barre menu responsive">
+require_once 'template/header.php';
 
-    </ul>
-  </nav>
-</header>
-<body>
+?>
+
   <main>
     <article>
       <section>
@@ -103,28 +83,5 @@ require_once 'lib/config.php';
     </article>
 
   </main>
-</body>
-<script src="style.js" type="module"></script>
-<footer>
-  <article class="footer">
-    <h1>Proxi Super</h1>
-      <pre class="text_footer">36 rue de la cense</pre>
-      <pre class="text_footer">60170 Tracy le mont</pre>
-      <pre class="text_footer">Téléphone : 09.81.19.29.39</pre>
-  </article>
 
-  <li class="input_footer"><a href="#">Nous contactez</a></li>
-
-   <a class="link_social" href="https://www.facebook.com/p/Proxi-Super-Tracy-Le-Mont-100076022313357/" target="_blank"><img src="assets/icons8-facebook-nouveau-48.png"
-   title="Lien facebook du Proxi Super Tracy le mont"></a>
-
-  <article>
-    <h1>Horaires d'ouverture</h1>
-      <pre class="text_footer">Lundi : 15h00 à 19h00</pre>
-      <pre class="text_footer">Mardi au samedi</pre>
-      <pre class="text_footer">9h00/13h00 et 15h00/19h00</pre>
-      <pre class="text_footer">Dimanche : 9h00 à 13h00</pre>
-  </article>
-
-</footer>
-</html>
+<?php require_once 'template/footer.php'; ?>

@@ -1,3 +1,5 @@
+/*Style navbar responsive*/
+
 /*Récupération de nos éléments*/
 const navbar = document.getElementById('navbar');
 const logo = document.getElementById('img_logo');
@@ -17,19 +19,15 @@ navbar.addEventListener('click', function() {
 
   input_nav.forEach((input) => 
   input.style.margin = '10px')
-  console.log(input_nav);
  
   input_nav.forEach((input) => 
   input.style.fontSize = '1.5em')
-  console.log(input_nav);
 
   input_nav.forEach((input) => 
   input.style.borderRadius = '5px')
-  console.log(input_nav);
 
   link.forEach((link) => 
-  link.style.textDecoration = 'none')
-  console.log(input_nav);
- 
+  link.style.textDecoration = 'none') 
 })
+
 
