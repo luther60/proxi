@@ -1,6 +1,6 @@
 <?php 
 require_once 'lib/pdo.php';
-require_once 'lib/config.php';
+require_once 'lib/users.php';
 require_once 'template/header.php';
 
 ?>

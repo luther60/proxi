@@ -67,11 +67,32 @@ input:focus{border:6px solid #bfd53c;}
 
 /*Style error*/
 
-.alert{display: flex;justify-content: center;width: 350px;  background-color: red;}
+.alert{display: flex;justify-content: center; background-color: red;}
 
 /*Style accueil admin*/
 
 .hello_admin{display: flex;justify-content: center;}
+
+.info{display: flex;justify-content: center;font-size: 1.5em;}
+
+/*Style tableau et éléments CRUD admin*/
+
+.tableau{font-size: 1.5em;}
+
+caption{font-size: 2em;margin-bottom: 20px;}
+
+th{font-size: 2em;border:10px solid #bfd53c;width: 400px;}
+
+td{text-align: center;font-size: 1.5em; border:10px solid #bfd53c;width: 400px;}
+
+.recap{display: flex;flex-direction: column;align-items: center;font-size: 2em;}
+
+.delete{width: 320px;margin: auto;  font-size: 1.5em;background-color: #b37799;
+        height: 32px;border-radius: 10px;display: flex;  justify-content: center;}
+
+.b_update{margin-top: 30px;}
+
+
 
 /*Main mobile*/
 @media (max-width: 350px) {

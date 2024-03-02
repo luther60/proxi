@@ -11,9 +11,9 @@
   <nav>
     <img class="logo" id="img_logo" src="/../../assets/logoproxi2012.png" alt="Logo magasin Proxi Super">
     <ul class="navbar">
-      <li class="input input_nav"><a  href="/../../index.php">Accueil</a></li>
-      <li class="input input_nav"><a  href="/../../producteurs.php">Producteurs locaux</a></li>
-      <li class="input input_nav"><a  href="/../../Contact.html">A propos</a></li>
+      <li class="input input_nav"><a  href="/../../admin/accueil_admin">Accueil</a></li>
+      <li class="input input_nav"><a  href="/../admin/recettes.php">Recettes</a></li>
+      <li class="input input_nav"><a  href="/../admin/users/user_management">Utilisateurs</a></li>
       <li class="input input_nav"><a  href="/../../lib/logout.php">Deconnexion</a></li>
       <img class="bar" id="navbar" src="assets/icons8-menu-50.png" alt="Barre menu responsive">
 

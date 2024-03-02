@@ -5,9 +5,13 @@
  if(!isset($_SESSION['user'])) {
   getIndex();
  }
+
+
  ?>
 
-<h1 class="hello_admin">Bienvenue dans votre session <?= $_SESSION['user']['firstname'] ?></h1>
+<h1 class="hello_admin">Bienvenue dans la gestion des recettes <?= $_SESSION['user']['firstname'] ?></h1>
+
+
 
 
 <?php require_once __DIR__.'/../template/footer_sanitize.php'; ?>

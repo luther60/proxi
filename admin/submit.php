@@ -1,7 +1,7 @@
 <?php 
  require_once __DIR__.'/../admin/template_admin/header_admin.php';
  require_once __DIR__.'/../lib/pdo.php';
- require_once __DIR__.'/../lib/config.php';
+ require_once __DIR__.'/../lib/users.php';
  require_once __DIR__.'/../lib/error.php';
 ?>
 
@@ -44,14 +44,8 @@ if(isset($_POST['login']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if($user === '') {
     redirect();
+  }  
+  }   
   }
-    
-  }
-    
-  }
-  
-
-
 ?>
-
 <?php require_once __DIR__.'/../template/footer_sanitize.php';?>
