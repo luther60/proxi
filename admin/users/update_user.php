@@ -75,12 +75,11 @@ if(isset($_POST['update_user']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   ?>
   
 <h1 class="hello_admin">Formulaire de modification d'un utilisateur :</h1>
-<h2 class="hello_admin">Ne surtout pas modifier le champs "id" !!</h2>
 
 <form method="POST" action="update_user.php?=id<?= htmlentities($_GET['id'])?>">
 
-  <label for="id">Id&nbsp;:<span aria-label="required">*</span></label>
-  <input id="id" type="text" name="id" required value="<?= htmlentities($current_user['id']); ?>"/>
+  <label hidden  for="id">Id&nbsp;:<span aria-label="required">*</span></label>
+  <input hidden  id="id" type="text" name="id" required value="<?= htmlentities($current_user['id']); ?>"/>
 
   <label for="name">Nom&nbsp;:<span aria-label="required">*</span></label>
   <input id="name" type="text" name="name" required value="<?= htmlspecialchars($current_user['name']); ?>"/>

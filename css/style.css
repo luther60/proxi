@@ -55,6 +55,8 @@ label{font-size: 2em;font-weight: bold;margin: 30px;}
 
 input{height: 50px;width: 500px;font-size: 1.8em;text-align: center;border-radius: 10px;}
 
+textarea{border-radius: 10px;font-size: 1.8em;text-align: center;}
+
 input:focus{border:6px solid #bfd53c;}
 
 .button{height: 40px;width: 200px;margin: 40px;}
@@ -92,7 +94,26 @@ td{text-align: center;font-size: 1.5em; border:10px solid #bfd53c;width: 400px;}
 
 .b_update{margin-top: 30px;}
 
+/*Style recette admin*/
 
+.card_recipe{display: flex;flex-wrap: wrap;justify-content: space-around;}
+
+.content_recipe{display: flex;flex-direction: column;width: 300px;height: 500px;border: 5px solid #bfd53c;margin: 5px;
+  border-radius: 5px;}
+
+.img_recipe{width: 100%;height: 250px;}
+
+.modify{width: 300px;}
+
+.text_recipe{text-align: center;}
+
+.contains_button{display: flex;}
+
+.update_card{width: 100px;font-size: 1.5em;background-color: #b37799;text-align: center;margin-left: 10px;
+  border-radius: 10px;}
+
+.delete_card{width: 110px;font-size: 1.5em;background-color: #b37799;text-align: center;margin-left: 60px;
+  border-radius: 10px;}
 
 /*Main mobile*/
 @media (max-width: 350px) {
