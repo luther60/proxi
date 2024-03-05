@@ -13,6 +13,8 @@ nav{display: flex;background-color: #bfd53c;}
 .input, .input_footer{display: flex;  background-color: #b37799;width: 9em;justify-content:center;align-items: center;font-size: 1.5em;
       font-weight:900;border-radius: 10px 0px ;height: 40px; box-shadow: 6px 6px 6px black;transition: 0.2s;}
 
+.logo{width: 200px;height: 100px;}
+
 a{color: black;}
 
 .input:hover{width: 10em;height: 50px;}
@@ -94,18 +96,23 @@ td{text-align: center;font-size: 1.5em; border:10px solid #bfd53c;width: 400px;}
 
 .b_update{margin-top: 30px;}
 
-/*Style recette admin*/
+/*Style recette admin et user*/
 
-.card_recipe{display: flex;flex-wrap: wrap;justify-content: space-around;}
+.card_recipe{display: flex;flex-wrap: wrap;justify-content: space-around;align-items: center;}
 
-.content_recipe{display: flex;flex-direction: column;width: 300px;height: 500px;border: 5px solid #bfd53c;margin: 5px;
+.content_recipeAdmin{display: flex;flex-direction: column;width: 300px;height: 460px;border: 5px solid #bfd53c;margin: 5px;
+  border-radius: 5px;}
+
+.content_recipe{display: flex;flex-direction: column;width: 280px;height: 670px;border: 5px solid #bfd53c;margin: 5px;
   border-radius: 5px;}
 
 .img_recipe{width: 100%;height: 250px;}
 
 .modify{width: 300px;}
 
-.text_recipe{text-align: center;}
+.text_name{text-align: center;font-size: 2em;margin: 10px;}
+
+.text_recipe{text-align: center;margin: 10px;}
 
 .contains_button{display: flex;}
 
@@ -114,6 +121,23 @@ td{text-align: center;font-size: 1.5em; border:10px solid #bfd53c;width: 400px;}
 
 .delete_card{width: 110px;font-size: 1.5em;background-color: #b37799;text-align: center;margin-left: 60px;
   border-radius: 10px;}
+
+.detail{width: 220px;font-size: 1.5em;background-color: #b37799;text-align: center;margin: auto;
+  border-radius: 10px;}
+
+.detail:hover{background-color: #bfd53c;}
+
+/*Style recette detail*/
+
+.content_detail{display: flex;flex-direction: column;align-items: center;}
+
+.img_detail{width: 800px;height: 600px;border-radius: 10px;}
+
+.title_detail{font-size: 4em;}
+
+.subtitle_detail{font-size: 2em;}
+
+.text_detail{font-size: 1.5em;}
 
 /*Main mobile*/
 @media (max-width: 350px) {

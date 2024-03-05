@@ -20,7 +20,7 @@
   
   <section class="card_recipe">
     <?php foreach($recipes as $recipe) { ?>
-    <article class="content_recipe">
+    <article class="content_recipeAdmin">
       <img class="img_recipe" src="<?=$recipe['img']?>" alt="<?=$recipe['img']?>">
       <h3 class="text_recipe"><?=$recipe['name']?></h3>
       <h4 class="text_recipe"><?=$recipe['category']?></h4>

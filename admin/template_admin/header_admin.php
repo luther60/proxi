@@ -9,7 +9,7 @@
 </head>
 <header>
   <nav>
-    <img class="logo" id="img_logo" src="/../../assets/logoproxi2012.png" alt="Logo magasin Proxi Super">
+    <img class="logo" id="img_logo" src="/../../assets/favicon.ico" alt="Logo magasin Proxi Super">
     <ul class="navbar">
       <li class="input input_nav"><a  href="/../../admin/accueil_admin">Accueil</a></li>
       <li class="input input_nav"><a  href="/../admin/recipes/recettes.php">Recettes</a></li>

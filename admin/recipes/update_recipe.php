@@ -111,7 +111,7 @@ if(isset($_POST['update_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   $recipe = getRecipeById($pdo,$_GET['id']);
 
   ?>
-<img class="img_recipe  modify" src="<?=htmlentities($recipe['img'])?>" alt="<?=htmlentities($recipe['img'])?>">
+
 <h1 class="hello_admin">Formulaire de création d'une nouvelle recette :</h1>
 
 <form method="POST" action="update_recipe.php?id=<?=$_GET['id']?>" enctype="multipart/form-data">

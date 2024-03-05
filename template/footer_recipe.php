@@ -1,6 +1,6 @@
 </body>
 <script src="style.js" type="module"></script>
-
+<script src="recipes.js" type="module"></script>
 <footer>
   <article class="footer">
     <h1>Proxi Super</h1>

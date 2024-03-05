@@ -13,7 +13,7 @@
     <ul class="navbar">
       <li class="input input_nav"><a  href="index.php">Accueil</a></li>
       <li class="input input_nav"><a  href="producteurs.php">Producteurs locaux</a></li>
-      <li class="input input_nav"><a  href="Contact.html">A propos</a></li>
+      <li class="input input_nav"><a  href="recette_user.php">Nos recettes</a></li>
       <li class="input input_nav"><a  href="login.php">Espace pro</a></li>
       <img class="bar" id="navbar" src="assets/icons8-menu-50.png" alt="Barre menu responsive">
 
