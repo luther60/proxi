@@ -127,6 +127,11 @@ td{text-align: center;font-size: 1.5em; border:10px solid #bfd53c;width: 400px;}
 
 .detail:hover{background-color: #bfd53c;}
 
+.liste_filter{display: flex;justify-content: center;align-items: center;}
+
+select{width: 230px;height: 30px;font-size: 1.3em;border-radius: 20px;text-align: center;}
+
+
 /*Style recette detail*/
 
 .content_detail{display: flex;flex-direction: column;align-items: center;}
@@ -145,6 +150,10 @@ td{text-align: center;font-size: 1.5em; border:10px solid #bfd53c;width: 400px;}
   section{flex-direction: column;}
 
   .img_index{width: 200px; height: 200px;} 
+
+  .liste_filter{flex-direction: column;}
+
+  #lab_filter{width: 200px;}
 }
 /*Main tablet*/
 @media only screen and (min-width:350px) and (max-width: 990px) {

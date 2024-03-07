@@ -17,7 +17,7 @@
 <div class="delete"><a href="create_recipe.php">Créer une nouvelle recette</a></div>
 
 <main>
-  
+
   <section class="card_recipe">
     <?php foreach($recipes as $recipe) { ?>
     <article class="content_recipeAdmin">

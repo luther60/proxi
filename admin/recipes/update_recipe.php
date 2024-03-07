@@ -14,7 +14,7 @@
 if(isset($_POST['update_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   //Traitement de chaque entrée utilisateur
   if(isset($_POST['id'])) {
-    $id_sanitize =htmlentities($_POST['id'],);
+    $id_sanitize =htmlspecialchars($_POST['id'],);
     if(!preg_match("/^[0-9]*$/",$id_sanitize)) {
       echo '<h1 class=\'alert\'>Le format utilisé pour l\'id est incorrect !! </h1>';
     } else {
@@ -23,17 +23,14 @@ if(isset($_POST['update_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   if(isset($_POST['name'])) {
-    $name_sanitize = htmlentities($_POST['name']);
-    if(!preg_match("/^[a-zA-Z-' ]*$/",$name_sanitize)) {
-      echo '<h1 class=\'alert\'>Le format utilisé pour le nom est incorrect !! </h1>';
-    }else {
-      $name = $name_sanitize;
-    }
+    $name_sanitize = htmlspecialchars($_POST['name']);
+    $name_sanitize = ucwords($name_sanitize);
+    $name = $name_sanitize;
   }
 
   if(isset($_POST['time'])) {
-    $time_sanitize = htmlentities($_POST['time'],);
-    if(!preg_match("/^[a-zA-Z-0-9 ]*$/",$time_sanitize)) {
+    $time_sanitize = htmlspecialchars($_POST['time'],);
+    if(!preg_match("/^[0-9]*$/",$time_sanitize)) {
       echo '<h1 class=\'alert\'>Le format utilisé pour le temps de préparation est incorrect !! </h1>';
     } else {
       $time = $time_sanitize;
@@ -41,8 +38,8 @@ if(isset($_POST['update_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   if(isset($_POST['cook'])) {
-    $cook_sanitize = htmlentities($_POST['cook']);
-    if(!preg_match("/^[a-zA-Z-0-9 ]*$/",$cook_sanitize)) {
+    $cook_sanitize = htmlspecialchars($_POST['cook']);
+    if(!preg_match("/^[0-9]*$/",$cook_sanitize)) {
       echo '<h1 class=\'alert\'>Le format utilisé pour le temps de cuisson est incorrect !! </h1>'; 
     } else {
       $cook = $cook_sanitize;
@@ -50,12 +47,9 @@ if(isset($_POST['update_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   if(isset($_POST['category'])) {
-    $category_sanitize = htmlentities($_POST['category']);
-    if(!preg_match("/^[a-zA-Z-0-9]*$/", $category_sanitize )) {
-      echo '<h1 class=\'alert\'>Le format utilisé pour la catégorie est incorrect !! </h1>';
-    } else {
+    $category_sanitize = htmlspecialchars($_POST['category']);
+    $category_sanitize = ucwords($category_sanitize); 
       $category = $category_sanitize;
-    } 
   }
 
   if(isset($_POST['ingredients'])) {

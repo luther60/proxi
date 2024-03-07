@@ -6,15 +6,12 @@ const recipes = await fetch("/../lib/recipes.json", {
   }
 }).then(recipe => recipe.json());
 
-const main = document.querySelector('main')
-const section = document.createElement('section')
-  section.classList.add('card_recipe')
-  main.appendChild(section)
+const section = document.querySelector('.card_recipe')
+
+function getFilter(recipes) { 
 
 for(let i = 0; i < recipes.length; i++ ) {
-  console.log(recipes[i])
-  
-
+ 
   const article = document.createElement('article')
   article.classList.add('content_recipe')
   //Création image
@@ -46,7 +43,6 @@ for(let i = 0; i < recipes.length; i++ ) {
   const category = document.createElement('h3')
   category.classList.add('text_recipe')
   category.innerText = recipes[i].category
-
   const detail = document.createElement('a')
   detail.classList.add('detail')
   detail.innerText = 'Détails de la recette'
@@ -62,5 +58,86 @@ for(let i = 0; i < recipes.length; i++ ) {
   h_cook.appendChild(cook)
   h_category.appendChild(category)
   article.appendChild(detail)
-  
 }
+}
+
+getFilter(recipes)
+
+const filter = document.querySelector('#filter_recipe')
+//Ecoute de l'event au changement
+filter.addEventListener('change', function() {
+  if(filter.value == 'time') {//Si choix de temps de cuisson(value = time)
+    const filterTime = recipes.sort(function(a,b) {
+    return a.time - b.time  
+  })
+   document.querySelector('.card_recipe').innerHTML = "";
+   getFilter(filterTime) 
+  }
+
+  if(filter.value == 'cook') {//Si choix de temps de préparation(value = cook)
+    const filterCook = recipes.sort(function(a,b) {
+    return a.cook - b.cook  
+  })
+   document.querySelector('.card_recipe').innerHTML = "";
+   getFilter(filterCook) 
+  }
+
+if(filter.value == 'Plat') {//Si choix par type 'Plat'(value = Plat) 
+   document.querySelector('.card_recipe').innerHTML = "";//On vide la page
+  for(let i = 0; i < recipes.length; i++) {//On boucle sur les index
+  let value = recipes[i].category//On stocke ds une variable
+  
+  if(value == 'Plat') {//On compare
+    const newArray = []//On instancie un array vide
+    newArray.push(recipes[i])//On push les bonnes valeurs ds le tableau
+    getFilter(newArray)//On affiche
+  }
+ } 
+}
+
+if(filter.value == 'Entrée') {//Si choix par type 'Entrée'(value = Entrée)  
+document.querySelector('.card_recipe').innerHTML = "";
+  for(let i = 0; i < recipes.length; i++) {
+  let value = recipes[i].category
+
+  if(value == 'Entrée') {
+    const newArray = []
+    newArray.push(recipes[i])
+    getFilter(newArray)
+  } 
+ } 
+}
+
+if(filter.value == 'Dessert') {//Si choix par type 'Dessert'(value = Dessert)  
+   document.querySelector('.card_recipe').innerHTML = "";
+  for(let i = 0; i < recipes.length; i++) {
+  let value = recipes[i].category
+
+  if(value == 'Dessert') {
+    const newArray = []
+    newArray.push(recipes[i])
+    console.log(newArray)
+    getFilter(newArray)
+  }
+ } 
+}
+
+if(filter.value == 'allRecipes') {
+  getFilter(recipes)
+}
+
+})
+ 
+
+ 
+
+
+
+
+
+
+
+
+  
+
+

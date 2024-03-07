@@ -14,17 +14,14 @@
 if(isset($_POST['create_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   //Traitement de chaque entrée utilisateur
   if(isset($_POST['name'])) {
-    $name_sanitize = htmlentities($_POST['name']);
-    if(!preg_match("/^[a-zA-Z-' ]*$/",$name_sanitize)) {
-      echo '<h1 class=\'alert\'>Le format utilisé pour le nom est incorrect !! </h1>';
-    }else {
-      $name = $name_sanitize;
-    }
+    $name_sanitize = htmlspecialchars($_POST['name']);
+    $name_sanitize = ucwords($name_sanitize);
+    $name = $name_sanitize;
   }
 
   if(isset($_POST['time'])) {
-    $time_sanitize = htmlentities($_POST['time'],);
-    if(!preg_match("/^[a-zA-Z-0-9 ]*$/",$time_sanitize)) {
+    $time_sanitize = htmlspecialchars($_POST['time'],);
+    if(!preg_match("/^[0-9]*$/",$time_sanitize)) {
       echo '<h1 class=\'alert\'>Le format utilisé pour le temps de préparation est incorrect !! </h1>';
     } else {
       $time = $time_sanitize;
@@ -32,8 +29,8 @@ if(isset($_POST['create_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   if(isset($_POST['cook'])) {
-    $cook_sanitize = htmlentities($_POST['cook']);
-    if(!preg_match("/^[a-zA-Z-0-9 ]*$/",$cook_sanitize)) {
+    $cook_sanitize = htmlspecialchars($_POST['cook']);
+    if(!preg_match("/^[0-9]*$/",$cook_sanitize)) {
       echo '<h1 class=\'alert\'>Le format utilisé pour le temps de cuisson est incorrect !! </h1>'; 
     } else {
       $cook = $cook_sanitize;
@@ -41,14 +38,11 @@ if(isset($_POST['create_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   if(isset($_POST['category'])) {
-    $category_sanitize = htmlentities($_POST['category']);
-    if(!preg_match("/^[a-zA-Z-0-9]*$/", $category_sanitize )) {
-      echo '<h1 class=\'alert\'>Le format utilisé pour la catégorie est incorrect !! </h1>';
-    } else {
+    $category_sanitize = htmlspecialchars($_POST['category']);
+    $category_sanitize = ucwords($category_sanitize); 
       $category = $category_sanitize;
     } 
-  }
-
+  
   if(isset($_POST['ingredients'])) {
     $ingredients = htmlspecialchars($_POST['ingredients']);
     }
@@ -103,13 +97,13 @@ if(isset($_POST['create_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   <input id="name" type="text" name="name" required />
 
   <label for="time">Temps de préparation&nbsp;:<span aria-label="required">*</span></label>
-  <input id="time" type="text" name="time" />
+  <input id="time" type="text" name="time" placeholder="Uniquement le chiffre" />
 
   <label for="cook">Temps de cuisson&nbsp;:<span aria-label="required">*</span></label>
-  <input id="cook" type="text" name="cook" required />
+  <input id="cook" type="text" name="cook" required placeholder="Uniquement le chiffre"/>
 
   <label for="category">Type de plat&nbsp;:<span aria-label="required">*</span></label>
-  <input id="category" type="text" name="category" required placeholder="entrée,dessert,plat..."/>
+  <input id="category" type="text" name="category" required placeholder="Entrée,dessert,plat..."/>
 
   <label for="ingredients">Liste des ingrédients&nbsp;:<span aria-label="required">*</span></label>
   <textarea id="ingredients" name="ingredients" rows="20" cols="80" required placeholder="Ingrédients..."></textarea>
@@ -118,7 +112,7 @@ if(isset($_POST['create_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   <textarea id="product" name="product" rows="20" cols="80" required placeholder="Déroulement de la recette..."></textarea>
 
   <label for="img">Ajouter une image&nbsp;:<span aria-label="required">*</span></label>
-  <input type="file" name="img">
+  <input type="file" name="img" required>
 
   <input class="button b_update" type="submit" name="create_recipe" value="Créer">
 
