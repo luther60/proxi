@@ -39,11 +39,13 @@ p{font-family:'Times New Roman', Times, serif}
 
 h3{margin: 0;}
 
+.title{font-size: 2.5em;font-family:'Times New Roman', Times, serif;margin: auto;width: 450px;}
+
 /*Style main producteurs locaux */
 
 .product{display: flex;flex-direction: column;align-items: center;}
 
-.title{font-size: 2.5em;font-family:'Times New Roman', Times, serif}
+.title_product{font-size: 2.5em;font-family:'Times New Roman', Times, serif;margin: auto;}
 
 .subtitle{font-size: 1.5em;font-family:'Times New Roman', Times, serif}
 
@@ -154,6 +156,10 @@ select{width: 230px;height: 30px;font-size: 1.3em;border-radius: 20px;text-align
   .liste_filter{flex-direction: column;}
 
   #lab_filter{width: 200px;}
+
+  .img_detail{width: 310px;height: 200px;}
+
+  .title{width: 250px;}
 }
 /*Main tablet*/
 @media only screen and (min-width:350px) and (max-width: 990px) {

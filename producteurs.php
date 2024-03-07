@@ -11,7 +11,7 @@ require_once 'template/header.php';
     </section>
     
     <section class="product">
-      <h1 class="title">Découvrez les visages et les histoires de ceux qui cultivent et élèvent les produits présents dans nos rayons.</h1>
+      <h1 class="title_product">Découvrez les visages et les histoires de ceux qui cultivent et élèvent les produits présents dans nos rayons.</h1>
       <h3 class="subtitle">GAEC Labarre : une exploitation familiale engagée</h3>
       <p class="textcontent">Situé à Salency dans le département de l'Oise, les frères Labarre sont polyculteurs-éleveurs depuis 20 ans. Ils possèdent 
          210 ha de polycultures, dont 1/4 des terres sert à l’herbage pour 230 limousine pure race (60 allaitantes, génisses et 

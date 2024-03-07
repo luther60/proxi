@@ -90,7 +90,6 @@ if(isset($_POST['create_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <h1 class="hello_admin">Formulaire de création d'une nouvelle recette :</h1>
 
-
 <form method="POST" action="create_recipe.php" enctype="multipart/form-data">
 
   <label for="name">Nom de la recette&nbsp;:<span aria-label="required">*</span></label>
