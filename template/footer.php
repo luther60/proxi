@@ -11,7 +11,8 @@
 
   <li class="input_footer"><a href="#">Nous contactez</a></li>
 
-   <a class="link_social" href="https://www.facebook.com/p/Proxi-Super-Tracy-Le-Mont-100076022313357/" target="_blank"><img src="assets/icons8-facebook-nouveau-48.png"
+   <a class="link_social" href="https://www.facebook.com/p/Proxi-Super-Tracy-Le-Mont-100076022313357/" 
+   target="_blank"><img src="assets/icons8-facebook-nouveau-48.png"
    title="Lien facebook du Proxi Super Tracy le mont"></a>
 
   <article>
@@ -21,6 +22,5 @@
       <pre class="text_footer">9h00/13h00 et 15h00/19h00</pre>
       <pre class="text_footer">Dimanche : 9h00 à 13h00</pre>
   </article>
-
 </footer>
 </html>

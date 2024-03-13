@@ -17,7 +17,7 @@ if(isset($_POST['login']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
     //Traitement de l'email et password
     $email = filter_var($_POST['mail']);
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      errMail();
+      echo '<h1 class=\'alert\'>Adresse mail ou mot de passe invalide !! </h1>';
     }
     $password = htmlentities($_POST['password']);
     //Vérification de l'existence de l'utilisateur et de son password
@@ -31,12 +31,14 @@ if(isset($_POST['login']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
   if($user) {
     if($user['role'] === 'admin') {
       session_start();
+      session_regenerate_id(true);
       $_SESSION['user'] = $user;
-      setcookie("useradmin", 'user', time() + 3600, '/');
+      setcookie("useradmin", 'admin', time()+3600, '/');
       header("location: accueil_admin.php");
     }
     if($user['role'] === 'user') {
       session_start();
+      session_regenerate_id(true);
       $_SESSION['user'] = $user;
       setcookie("user", 'user', time() + 3600, '/');
       header("location: /../../producteurs.php");

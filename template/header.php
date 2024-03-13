@@ -37,7 +37,6 @@ define('_RECETTE_HEADER_','Recettes de cuisine facile, pas cher, rapide | Proxi 
       <li class="input input_nav"><a  href="recette_user.php">Nos recettes</a></li>
       <li class="input input_nav"><a  href="login.php">Espace pro</a></li>
       <img class="bar" id="navbar" src="assets/icons8-menu-50.png" alt="Barre menu responsive">
-
     </ul>
   </nav>
 </header>

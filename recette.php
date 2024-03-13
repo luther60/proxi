@@ -28,7 +28,8 @@ if(isset($_GET['id'])) {
   <h2 class="subtitle_detail">Préparation :</h2>
   <p class="text_detail"><?=nl2br($recipe['product'])?> min</p>
 
-</main>
+  <a class="detail" href="pdf.php?id=<?=$recipe['id']?>" target="_blank">Télécharger la recette en PDF</a>
 
+</main>
 
 <?php require_once 'template/footer.php'; ?>

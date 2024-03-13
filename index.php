@@ -10,45 +10,47 @@ $one = array_rand($recipes);
 $two = array_rand($recipes);
 $three = array_rand($recipes);
 $four = array_rand($recipes);
+
 ?>
 
   <main>
+    <div><i class="fa fa-star gold"></i></div>
     <h1 class="title">Nos recettes du moment !!</h1>
     <section class="card_recipe">
 
       <article class="content_recipe">
         <img class="img_recipe" src="admin/recipes/<?=$recipes[$one]['img']?>">
         <h1 class="text_name"><?=$recipes[$one]['name']?></h1>
-        <h2 class="text_recipe">Temps de préparation<br><br><?=$recipes[$one]['time']?></h2>
-        <h2 class="text_recipe">Temps de cuisson<br><br><?=$recipes[$one]['cook']?> min</h2>
-        <h2 class="text_recipe">Type de plats<br><br><?=$recipes[$one]['category']?></h2>
+        <h2 class="text_recipe">Temps de préparation<br><?=$recipes[$one]['time']?></h2>
+        <h2 class="text_recipe">Temps de cuisson<br><?=$recipes[$one]['cook']?> min</h2>
+        <h2 class="text_recipe">Type de plats<br><?=$recipes[$one]['category']?></h2>
         <a class="detail" href="recette.php?id=<?=$recipes[$one]['id']?>">Détails de la recette</a>
       </article>
 
       <article class="content_recipe">
         <img class="img_recipe" src="admin/recipes/<?=$recipes[$two]['img']?>">
         <h1 class="text_name"><?=$recipes[$two]['name']?></h1>
-        <h2 class="text_recipe">Temps de préparation<br><br><?=$recipes[$two]['time']?></h2>
-        <h2 class="text_recipe">Temps de cuisson<br><br><?=$recipes[$two]['cook']?></h2>
-        <h2 class="text_recipe">Type de plats<br><br><?=$recipes[$two]['category']?></h2>
+        <h2 class="text_recipe">Temps de préparation<br><?=$recipes[$two]['time']?></h2>
+        <h2 class="text_recipe">Temps de cuisson<br><?=$recipes[$two]['cook']?></h2>
+        <h2 class="text_recipe">Type de plats<br><?=$recipes[$two]['category']?></h2>
         <a class="detail" href="recette.php?id=<?=$recipes[$two]['id']?>">Détails de la recette</a>
       </article>
 
       <article class="content_recipe">
         <img class="img_recipe" src="admin/recipes/<?=$recipes[$three]['img']?>">
         <h1 class="text_name"><?=$recipes[$three]['name']?></h1>
-        <h2 class="text_recipe">Temps de préparation<br><br><?=$recipes[$three]['time']?></h2>
-        <h2 class="text_recipe">Temps de cuisson<br><br><?=$recipes[$three]['cook']?></h2>
-        <h2 class="text_recipe">Type de plats<br><br><?=$recipes[$three]['category']?></h2>
+        <h2 class="text_recipe">Temps de préparation<br><?=$recipes[$three]['time']?></h2>
+        <h2 class="text_recipe">Temps de cuisson<br><?=$recipes[$three]['cook']?></h2>
+        <h2 class="text_recipe">Type de plats<br><?=$recipes[$three]['category']?></h2>
         <a class="detail" href="recette.php?id=<?=$recipes[$three]['id']?>">Détails de la recette</a>
       </article>
   
       <article class="content_recipe">
         <img class="img_recipe" src="admin/recipes/<?=$recipes[$four]['img']?>">
         <h1 class="text_name"><?=$recipes[$four]['name']?></h1>
-        <h2 class="text_recipe">Temps de préparation<br><br><?=$recipes[$four]['time']?></h2>
-        <h2 class="text_recipe">Temps de cuisson<br><br><?=$recipes[$four]['cook']?></h2>
-        <h2 class="text_recipe">Type de plats<br><br><?=$recipes[$four]['category']?></h2>
+        <h2 class="text_recipe">Temps de préparation<br><?=$recipes[$four]['time']?></h2>
+        <h2 class="text_recipe">Temps de cuisson<br><?=$recipes[$four]['cook']?></h2>
+        <h2 class="text_recipe">Type de plats<br><?=$recipes[$four]['category']?></h2>
         <a class="detail" href="recette.php?id=<?=$recipes[$four]['id']?>">Détails de la recette</a>
       </article>
     </section>

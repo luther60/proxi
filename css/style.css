@@ -105,16 +105,16 @@ td{text-align: center;font-size: 1.5em; border:10px solid #bfd53c;width: 400px;}
 .content_recipeAdmin{display: flex;flex-direction: column;width: 300px;height: 460px;border: 5px solid #bfd53c;margin: 5px;
   border-radius: 5px;}
 
-.content_recipe{display: flex;flex-direction: column;width: 280px;height: 670px;border: 5px solid #bfd53c;margin: 5px;
+.content_recipe{display: flex;flex-direction: column;width: 280px;height: 535px;border: 5px solid #bfd53c;margin: 5px;
   border-radius: 5px;}
 
 .img_recipe{width: 100%;height: 250px;}
 
 .modify{width: 300px;}
 
-.text_name{text-align: center;font-size: 2em;margin: 10px;}
+.text_name{text-align: center;font-size: 1.5em;margin: 10px;}
 
-.text_recipe{text-align: center;margin: 10px;}
+.text_recipe{text-align: center;margin: 5px;font-size: 1em;}
 
 .contains_button{display: flex;}
 
@@ -125,13 +125,16 @@ td{text-align: center;font-size: 1.5em; border:10px solid #bfd53c;width: 400px;}
   border-radius: 10px;}
 
 .detail{width: 220px;font-size: 1.5em;background-color: #b37799;text-align: center;margin: auto;
-  border-radius: 10px;}
+  border-radius: 10px;margin-top: 10px;margin-bottom: 10px;}
 
 .detail:hover{background-color: #bfd53c;}
 
 .liste_filter{display: flex;justify-content: center;align-items: center;}
 
 select{width: 230px;height: 30px;font-size: 1.3em;border-radius: 20px;text-align: center;}
+
+.star:hover{color: #b37799;}
+
 
 
 /*Style recette detail*/
@@ -146,7 +149,7 @@ select{width: 230px;height: 30px;font-size: 1.3em;border-radius: 20px;text-align
 
 .text_detail{font-size: 1.5em;}
 
-/*Main mobile*/
+/*Style mobile*/
 @media (max-width: 350px) {
 
   section{flex-direction: column;}
@@ -160,13 +163,18 @@ select{width: 230px;height: 30px;font-size: 1.3em;border-radius: 20px;text-align
   .img_detail{width: 310px;height: 200px;}
 
   .title{width: 250px;}
+
+  .subtitle_detail{font-size: 1.5em;}
+
 }
-/*Main tablet*/
+/*Style tablet*/
 @media only screen and (min-width:350px) and (max-width: 990px) {
 
   section{flex-direction: column;}
 
   .img_index{width: 200px; height: 200px;}
+
+  .img_detail{width: 350px;height: 300px;}
 }
 /*Header tablet*/
 @media only screen and (min-width:500px) and (max-width: 1260px) {

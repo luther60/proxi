@@ -21,7 +21,7 @@ if(isset($_POST['create_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if(isset($_POST['time'])) {
     $time_sanitize = htmlspecialchars($_POST['time'],);
-    if(!preg_match("/^[0-9]*$/",$time_sanitize)) {
+    if(!preg_match("/^[a-z-A-Z0-9 ]*$/",$time_sanitize)) {
       echo '<h1 class=\'alert\'>Le format utilisé pour le temps de préparation est incorrect !! </h1>';
     } else {
       $time = $time_sanitize;
@@ -30,7 +30,7 @@ if(isset($_POST['create_recipe']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if(isset($_POST['cook'])) {
     $cook_sanitize = htmlspecialchars($_POST['cook']);
-    if(!preg_match("/^[0-9]*$/",$cook_sanitize)) {
+    if(!preg_match("/^[a-z-A-Z0-9 ]*$/",$cook_sanitize)) {
       echo '<h1 class=\'alert\'>Le format utilisé pour le temps de cuisson est incorrect !! </h1>'; 
     } else {
       $cook = $cook_sanitize;
